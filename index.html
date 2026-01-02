@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Assets | Alicia Ward</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="btn-primary back-link">Back to Portfolio</a>
+            <h1>Design Assets</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-intro">
+            <p>Hand-crafted graphics, icons, and UI elements for web projects. Everything here is custom-made — no stock images, no templates.</p>
+        </section>
+
+        <!-- Filter Nav -->
+        <nav class="filter-nav">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="icons">Icons</button>
+            <button class="filter-btn" data-filter="patterns">Patterns</button>
+            <button class="filter-btn" data-filter="illustrations">Illustrations</button>
+        </nav>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-grid">
+            
+            <!-- Asset Item -->
+            <article class="asset-card" data-category="icons">
+                <div class="asset-preview">
+                    <img src="images/starburst-icons.png" alt="MCM starburst icon set">
+                </div>
+                <div class="asset-info">
+                    <h3>Starburst Icons</h3>
+                    <p>Geometric decorative icons inspired by atomic-age design</p>
+                    <span class="tag">Icons</span>
+                </div>
+            </article>
+
+            <!-- Asset Item -->
+            <article class="asset-card" data-category="patterns">
+                <div class="asset-preview">
+                    <img src="images/diamond-patterns.png" alt="Diamond pattern dividers">
+                </div>
+                <div class="asset-info">
+                    <h3>Diamond Patterns</h3>
+                    <p>Decorative dividers and section breaks</p>
+                    <span class="tag">Patterns</span>
+                </div>
+            </article>
+
+            <!-- Asset Item -->
+            <article class="asset-card" data-category="icons">
+                <div class="asset-preview">
+                    <img src="images/theme-toggle-icon.png" alt="Sun moon theme toggle icon">
+                </div>
+                <div class="asset-info">
+                    <h3>Theme Toggle</h3>
+                    <p>Custom sun/moon hybrid for dark mode switching</p>
+                    <span class="tag">Icons</span>
+                </div>
+            </article>
+
+            <!-- Asset Item -->
+            <article class="asset-card" data-category="illustrations">
+                <div class="asset-preview">
+                    <img src="images/geometric-portrait.png" alt="Geometric portrait illustration">
+                </div>
+                <div class="asset-info">
+                    <h3>Geometric Portrait</h3>
+                    <p>Stylized profile illustration with MCM aesthetic</p>
+                    <span class="tag">Illustrations</span>
+                </div>
+            </article>
+
+            <!-- Asset Item -->
+            <article class="asset-card" data-category="icons">
+                <div class="asset-preview">
+                    <img src="images/service-icons.png" alt="Service icons for frontend, graphics, and UI/UX">
+                </div>
+                <div class="asset-info">
+                    <h3>Service Icons</h3>
+                    <p>Abstract icons representing development services</p>
+                    <span class="tag">Icons</span>
+                </div>
+            </article>
+
+            <!-- Asset Item -->
+            <article class="asset-card" data-category="patterns">
+                <div class="asset-preview">
+                    <img src="images/background-pattern.png" alt="Subtle crosshatch background pattern">
+                </div>
+                <div class="asset-info">
+                    <h3>Background Pattern</h3>
+                    <p>Subtle geometric texture for page backgrounds</p>
+                    <span class="tag">Patterns</span>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="diamond-banner-mini">
+            <span class="diamond diamond-small teal"></span>
+            <span class="diamond diamond-small orange"></span>
+            <span class="diamond diamond-small teal"></span>
+            <span class="diamond diamond-small orange"></span>
+            <span class="diamond diamond-small teal"></span>
+        </div>
+        <p class="footer-copyright">© 2025 Alicia Ward</p>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>
