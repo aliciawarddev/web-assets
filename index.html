@@ -12,15 +12,15 @@
 <body>
     <header>
         <div class="header-content">
-            <a href="../index.html" class="btn-primary back-link">Back to Portfolio</a>
-            <h1>Design Assets</h1>
+            <a href="https://aliciawarddev.github.io/alicia-ward-dev/" class="btn-primary back-link">← Back</a>
+            <div class="header-text">
+                <h1>Design Assets</h1>
+                <p class="header-tagline">Hand-crafted. No stock. No templates.</p>
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="gallery-intro">
-            <p>Hand-crafted graphics, icons, and UI elements for web projects. Everything here is custom-made — no stock images, no templates.</p>
-        </section>
 
         <!-- Filter Nav -->
         <nav class="filter-nav">
@@ -30,83 +30,66 @@
             <button class="filter-btn" data-filter="illustrations">Illustrations</button>
         </nav>
 
-        <!-- Gallery Grid -->
-        <section class="gallery-grid">
-            
-            <!-- Asset Item -->
-            <article class="asset-card" data-category="icons">
-                <div class="asset-preview">
-                    <img src="images/starburst-icons.png" alt="MCM starburst icon set">
-                </div>
-                <div class="asset-info">
-                    <h3>Starburst Icons</h3>
-                    <p>Geometric decorative icons inspired by atomic-age design</p>
-                    <span class="tag">Icons</span>
-                </div>
-            </article>
+<!-- Gallery Grid -->
+<section class="gallery-grid">
+    
+    <article class="asset-card" data-category="icons">
+        <div class="asset-preview">
+            <img src="images/icon-starburst.PNG" alt="MCM starburst icon set">
+        </div>
+        <div class="asset-info">
+            <h3>Starburst Icons</h3>
+            <p>Atomic-age decorative accents</p>
+        </div>
+    </article>
 
-            <!-- Asset Item -->
-            <article class="asset-card" data-category="patterns">
-                <div class="asset-preview">
-                    <img src="images/diamond-patterns.png" alt="Diamond pattern dividers">
-                </div>
-                <div class="asset-info">
-                    <h3>Diamond Patterns</h3>
-                    <p>Decorative dividers and section breaks</p>
-                    <span class="tag">Patterns</span>
-                </div>
-            </article>
+    <article class="asset-card" data-category="icons">
+        <div class="asset-preview">
+            <img src="images/icon-sun-moon.PNG" alt="Sun moon theme toggle icon">
+        </div>
+        <div class="asset-info">
+            <h3>Theme Toggle</h3>
+            <p>Dark/light mode switcher</p>
+        </div>
+    </article>
 
-            <!-- Asset Item -->
-            <article class="asset-card" data-category="icons">
-                <div class="asset-preview">
-                    <img src="images/theme-toggle-icon.png" alt="Sun moon theme toggle icon">
-                </div>
-                <div class="asset-info">
-                    <h3>Theme Toggle</h3>
-                    <p>Custom sun/moon hybrid for dark mode switching</p>
-                    <span class="tag">Icons</span>
-                </div>
-            </article>
+    <article class="asset-card" data-category="illustrations">
+        <div class="asset-preview">
+            <img src="images/icon-portrait.PNG" alt="Geometric portrait illustration">
+        </div>
+        <div class="asset-info">
+            <h3>Geometric Portrait</h3>
+            <p>Stylized profile graphic</p>
+        </div>
+    </article>
 
-            <!-- Asset Item -->
-            <article class="asset-card" data-category="illustrations">
-                <div class="asset-preview">
-                    <img src="images/geometric-portrait.png" alt="Geometric portrait illustration">
-                </div>
-                <div class="asset-info">
-                    <h3>Geometric Portrait</h3>
-                    <p>Stylized profile illustration with MCM aesthetic</p>
-                    <span class="tag">Illustrations</span>
-                </div>
-            </article>
+    <article class="asset-card" data-category="icons">
+        <div class="asset-preview">
+            <img src="images/icon-brain.PNG" alt="Service icons for frontend, graphics, and UI/UX">
+        </div>
+        <div class="asset-info">
+            <h3>Service Icons</h3>
+            <p>Dev &amp; design representations</p>
+        </div>
+    </article>
 
-            <!-- Asset Item -->
-            <article class="asset-card" data-category="icons">
-                <div class="asset-preview">
-                    <img src="images/service-icons.png" alt="Service icons for frontend, graphics, and UI/UX">
-                </div>
-                <div class="asset-info">
-                    <h3>Service Icons</h3>
-                    <p>Abstract icons representing development services</p>
-                    <span class="tag">Icons</span>
-                </div>
-            </article>
+    <article class="asset-card" data-category="patterns">
+        <div class="asset-preview">
+            <img src="images/background-pattern.png" alt="Subtle crosshatch background pattern">
+        </div>
+        <div class="asset-info">
+            <h3>Crosshatch Pattern</h3>
+            <p>Subtle page texture</p>
+        </div>
+    </article>
 
-            <!-- Asset Item -->
-            <article class="asset-card" data-category="patterns">
-                <div class="asset-preview">
-                    <img src="images/background-pattern.png" alt="Subtle crosshatch background pattern">
-                </div>
-                <div class="asset-info">
-                    <h3>Background Pattern</h3>
-                    <p>Subtle geometric texture for page backgrounds</p>
-                    <span class="tag">Patterns</span>
-                </div>
-            </article>
-
-        </section>
+</section>
     </main>
+
+    <section class="cta-section">
+        <p>Need custom assets for your project?</p>
+        <a href="../contact.html" class="btn-primary">Let's talk</a>
+    </section>
 
     <footer>
         <div class="diamond-banner-mini">
@@ -119,6 +102,11 @@
         <p class="footer-copyright">© 2025 Alicia Ward</p>
     </footer>
 
-    <script src="js/gallery.js"></script>
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <img src="" alt="Asset preview" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
