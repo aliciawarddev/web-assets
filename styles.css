@@ -194,11 +194,10 @@ header::before {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xs);
-    aspect-ratio: 1 / 1;
 }
 
 .icon-slot {
-    background: var(--lightest);
+    background: var(--cream);
     border: 2px solid var(--dark);
     border-radius: 8px;
     display: flex;
@@ -207,6 +206,7 @@ header::before {
     padding: var(--space-xs);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    aspect-ratio: 1 / 1;
 }
 
 .icon-slot img {
