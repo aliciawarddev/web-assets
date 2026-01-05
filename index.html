@@ -22,68 +22,93 @@
 
     <main>
 
-        <!-- Filter Nav -->
-        <nav class="filter-nav">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="icons">Icons</button>
-            <button class="filter-btn" data-filter="patterns">Patterns</button>
-            <button class="filter-btn" data-filter="illustrations">Illustrations</button>
+        <!-- Pack Navigation -->
+        <nav class="pack-nav">
+            <button class="pack-nav-btn active" data-pack="all">All Packs</button>
+            <button class="pack-nav-btn" data-pack="simple">Simple MCM</button>
+            <button class="pack-nav-btn" data-pack="graphic">Graphic MCM</button>
+            <button class="pack-nav-btn" data-pack="geometric">Geometric</button>
         </nav>
 
-<!-- Gallery Grid -->
-<section class="gallery-grid">
-    
-    <article class="asset-card" data-category="icons">
-        <div class="asset-preview">
-            <img src="images/icon-starburst.PNG" alt="MCM starburst icon set">
-        </div>
-        <div class="asset-info">
-            <h3>Starburst Icons</h3>
-            <p>Atomic-age decorative accents</p>
-        </div>
-    </article>
+        <!-- Packs Grid -->
+        <section class="packs-grid">
 
-    <article class="asset-card" data-category="icons">
-        <div class="asset-preview">
-            <img src="images/icon-sun-moon.PNG" alt="Sun moon theme toggle icon">
-        </div>
-        <div class="asset-info">
-            <h3>Theme Toggle</h3>
-            <p>Dark/light mode switcher</p>
-        </div>
-    </article>
+            <!-- Simple MCM Pack -->
+            <article class="pack-card" data-pack="simple">
+                <div class="pack-preview">
+                    <div class="icon-grid">
+                        <div class="icon-slot"><img src="images/simple/icon-01.png" alt="Simple MCM icon"></div>
+                        <div class="icon-slot"><img src="images/simple/icon-02.png" alt="Simple MCM icon"></div>
+                        <div class="icon-slot"><img src="images/simple/icon-03.png" alt="Simple MCM icon"></div>
+                        <div class="icon-slot"><img src="images/simple/icon-04.png" alt="Simple MCM icon"></div>
+                        <div class="icon-slot"><img src="images/simple/icon-05.png" alt="Simple MCM icon"></div>
+                        <div class="icon-slot"><img src="images/simple/icon-06.png" alt="Simple MCM icon"></div>
+                        <div class="icon-slot"><img src="images/simple/icon-07.png" alt="Simple MCM icon"></div>
+                        <div class="icon-slot"><img src="images/simple/icon-08.png" alt="Simple MCM icon"></div>
+                        <div class="icon-slot empty"></div>
+                    </div>
+                </div>
+                <div class="pack-info">
+                    <div class="pack-header">
+                        <h3>Simple MCM</h3>
+                        <span class="pack-count">8 of 9</span>
+                    </div>
+                    <p>Clean lines, minimal detail, timeless forms</p>
+                    <button class="btn-secondary pack-expand-btn">View Pack</button>
+                </div>
+            </article>
 
-    <article class="asset-card" data-category="illustrations">
-        <div class="asset-preview">
-            <img src="images/icon-portrait.PNG" alt="Geometric portrait illustration">
-        </div>
-        <div class="asset-info">
-            <h3>Geometric Portrait</h3>
-            <p>Stylized profile graphic</p>
-        </div>
-    </article>
+            <!-- Graphic MCM Pack -->
+            <article class="pack-card" data-pack="graphic">
+                <div class="pack-preview">
+                    <div class="icon-grid">
+                        <div class="icon-slot"><img src="images/graphic/icon-01.png" alt="Graphic MCM icon"></div>
+                        <div class="icon-slot"><img src="images/graphic/icon-02.png" alt="Graphic MCM icon"></div>
+                        <div class="icon-slot"><img src="images/graphic/icon-03.png" alt="Graphic MCM icon"></div>
+                        <div class="icon-slot"><img src="images/graphic/icon-04.png" alt="Graphic MCM icon"></div>
+                        <div class="icon-slot"><img src="images/graphic/icon-05.png" alt="Graphic MCM icon"></div>
+                        <div class="icon-slot empty"></div>
+                        <div class="icon-slot empty"></div>
+                        <div class="icon-slot empty"></div>
+                        <div class="icon-slot empty"></div>
+                    </div>
+                </div>
+                <div class="pack-info">
+                    <div class="pack-header">
+                        <h3>Graphic MCM</h3>
+                        <span class="pack-count">5 of 9</span>
+                    </div>
+                    <p>Bold shapes, high contrast, atomic-age flair</p>
+                    <button class="btn-secondary pack-expand-btn">View Pack</button>
+                </div>
+            </article>
 
-    <article class="asset-card" data-category="icons">
-        <div class="asset-preview">
-            <img src="images/icon-brain.PNG" alt="Service icons for frontend, graphics, and UI/UX">
-        </div>
-        <div class="asset-info">
-            <h3>Service Icons</h3>
-            <p>Dev &amp; design representations</p>
-        </div>
-    </article>
+            <!-- Geometric Pack -->
+            <article class="pack-card" data-pack="geometric">
+                <div class="pack-preview">
+                    <div class="icon-grid">
+                        <div class="icon-slot"><img src="images/geometric/icon-01.png" alt="Geometric icon"></div>
+                        <div class="icon-slot"><img src="images/geometric/icon-02.png" alt="Geometric icon"></div>
+                        <div class="icon-slot"><img src="images/geometric/icon-03.png" alt="Geometric icon"></div>
+                        <div class="icon-slot empty"></div>
+                        <div class="icon-slot empty"></div>
+                        <div class="icon-slot empty"></div>
+                        <div class="icon-slot empty"></div>
+                        <div class="icon-slot empty"></div>
+                        <div class="icon-slot empty"></div>
+                    </div>
+                </div>
+                <div class="pack-info">
+                    <div class="pack-header">
+                        <h3>Geometric</h3>
+                        <span class="pack-count">3 of 9</span>
+                    </div>
+                    <p>Mathematical precision, abstract compositions</p>
+                    <button class="btn-secondary pack-expand-btn">View Pack</button>
+                </div>
+            </article>
 
-    <article class="asset-card" data-category="patterns">
-        <div class="asset-preview">
-            <img src="images/background-pattern.png" alt="Subtle crosshatch background pattern">
-        </div>
-        <div class="asset-info">
-            <h3>Crosshatch Pattern</h3>
-            <p>Subtle page texture</p>
-        </div>
-    </article>
-
-</section>
+        </section>
     </main>
 
     <section class="cta-section">
@@ -102,6 +127,25 @@
         <p class="footer-copyright">© 2025 Alicia Ward</p>
     </footer>
 
+    <!-- Pack Detail Modal -->
+    <div class="pack-modal" id="pack-modal">
+        <div class="pack-modal-content">
+            <button class="pack-modal-close" id="pack-modal-close">&times;</button>
+            <div class="pack-modal-header">
+                <h2 id="modal-pack-title">Pack Name</h2>
+                <p id="modal-pack-desc">Pack description</p>
+            </div>
+            <div class="pack-modal-grid" id="modal-icon-grid">
+                <!-- Icons injected by JS -->
+            </div>
+            <div class="pack-modal-cta">
+                <p>Want this pack for your project?</p>
+                <a href="../contact.html" class="btn-primary">Let's talk</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Icon Lightbox -->
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" id="lightbox-close">&times;</button>
         <img src="" alt="Asset preview" id="lightbox-img">
