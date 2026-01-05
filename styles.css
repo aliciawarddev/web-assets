@@ -41,6 +41,7 @@ body {
 
 main {
     background: var(--lightest);
+    padding-top: var(--space-2xl);
 }
 
 /* =======================================
@@ -53,19 +54,12 @@ h1 {
     color: var(--dark);
 }
 
-h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    letter-spacing: 0.05em;
-    color: var(--dark);
-}
-
 h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 0.03em;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
     color: var(--dark);
-    margin-bottom: var(--space-sm);
+    margin: 0;
 }
 
 p {
@@ -153,109 +147,44 @@ header::before {
     box-shadow: -4px 4px 0 0 var(--dark);
 }
 
-.btn-secondary {
-    background: var(--lightest);
-    color: var(--dark);
-    padding: 0.5rem 1.25rem;
-    border-radius: 20px;
-    border: 2px solid var(--dark);
-    font-weight: 600;
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: -2px 2px 0 0 var(--dark);
-    font-family: 'Inter', sans-serif;
-    width: 100%;
-}
-
-.btn-secondary:hover {
-    background: var(--orange);
-    transform: translate(-2px, -2px);
-    box-shadow: -4px 4px 0 0 var(--dark);
-}
-
-/* =======================================
-   TAGS
-   ======================================= */
-.tag {
-    display: inline-block;
-    background-color: var(--mustard);
-    color: var(--dark);
-    padding: 0.2rem 0.6rem;
-    border-radius: 15px;
-    border: 2px solid var(--dark);
-    font-weight: 600;
-    font-size: 0.65rem;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-/* =======================================
-   PACK NAVIGATION
-   ======================================= */
-.pack-nav {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-md);
-    padding: 0 var(--space-xl);
-    margin-top: var(--space-2xl);
-    margin-bottom: var(--space-2xl);
-    flex-wrap: wrap;
-}
-
-.pack-nav-btn {
-    background: var(--lightest);
-    color: var(--dark);
-    border: 2px solid var(--dark);
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: -2px 2px 0 0 var(--dark);
-}
-
-.pack-nav-btn:hover {
-    background: var(--teal);
-    color: var(--lightest);
-}
-
-.pack-nav-btn.active {
-    background: var(--teal);
-    color: var(--lightest);
-}
-
 /* =======================================
    PACKS GRID
    ======================================= */
 .packs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
     padding: 0 var(--space-xl) var(--space-2xl);
-    max-width: 80rem;
+    max-width: 72rem;
     margin: 0 auto;
 }
 
 .pack-card {
     background: var(--light);
     border: 2px solid var(--dark);
-    border-radius: 18px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: -4px 4px 0 0 var(--mustard);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.pack-card:hover {
-    box-shadow: -6px 6px 0 0 var(--mustard);
-    transform: translate(2px, -2px);
+.pack-header-bar {
+    background: var(--teal);
+    padding: var(--space-md) var(--space-md);
+    border-bottom: 2px solid var(--dark);
+}
+
+.pack-header-bar h3 {
+    color: var(--lightest);
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    text-shadow: 1px 1px 0 var(--teal-dark);
 }
 
 .pack-preview {
     background: var(--cream-light);
-    padding: var(--space-lg);
-    border-bottom: 2px solid var(--dark);
+    padding: var(--space-md);
 }
 
 /* =======================================
@@ -264,18 +193,19 @@ header::before {
 .icon-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-sm);
+    gap: var(--space-xs);
     aspect-ratio: 1 / 1;
 }
 
 .icon-slot {
     background: var(--lightest);
     border: 2px solid var(--dark);
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--space-sm);
+    padding: var(--space-xs);
+    cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -288,162 +218,31 @@ header::before {
 .icon-slot.empty {
     background: var(--cream);
     border-style: dashed;
+    border-color: var(--dark);
+    cursor: default;
     position: relative;
 }
 
 .icon-slot.empty::after {
-    content: '+';
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
-    color: var(--dark);
-    opacity: 0.2;
+    display: none;
 }
 
 /* =======================================
    PACK INFO
    ======================================= */
 .pack-info {
-    padding: var(--space-lg);
-}
-
-.pack-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: var(--space-xs);
-}
-
-.pack-info h3 {
-    font-size: 1.75rem;
-    margin-bottom: 0;
-}
-
-.pack-count {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--teal-dark);
-    background: var(--mustard-light);
-    padding: 0.2rem 0.5rem;
-    border-radius: 10px;
-    border: 1px solid var(--dark);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--light);
+    border-top: 2px solid var(--dark);
 }
 
 .pack-info p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-bottom: var(--space-md);
-}
-
-/* =======================================
-   PACK MODAL
-   ======================================= */
-.pack-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(35, 35, 35, 0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    padding: var(--space-xl);
-    overflow-y: auto;
-}
-
-.pack-modal.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.pack-modal-content {
-    background: var(--light);
-    border: 3px solid var(--dark);
-    border-radius: 24px;
-    max-width: 600px;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: -8px 8px 0 0 var(--teal);
-    position: relative;
-}
-
-.pack-modal-close {
-    position: absolute;
-    top: var(--space-md);
-    right: var(--space-md);
-    background: var(--orange);
-    border: 2px solid var(--dark);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.25rem;
-    line-height: 1;
-    cursor: pointer;
-    box-shadow: -2px 2px 0 0 var(--dark);
-    transition: background 0.3s ease;
-    z-index: 10;
-}
-
-.pack-modal-close:hover {
-    background: var(--teal);
-    color: var(--lightest);
-}
-
-.pack-modal-header {
-    padding: var(--space-xl);
-    padding-bottom: var(--space-md);
-    border-bottom: 2px solid var(--dark);
-    background: var(--cream);
-}
-
-.pack-modal-header h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--space-xs);
-}
-
-.pack-modal-header p {
-    font-size: 1rem;
-    opacity: 0.8;
-}
-
-.pack-modal-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
-    padding: var(--space-xl);
-    background: var(--cream-light);
-}
-
-.pack-modal-grid .icon-slot {
-    aspect-ratio: 1 / 1;
-    cursor: pointer;
-    padding: var(--space-md);
-}
-
-.pack-modal-grid .icon-slot:not(.empty):hover {
-    transform: scale(1.05);
-    box-shadow: -3px 3px 0 0 var(--mustard);
-}
-
-.pack-modal-grid .icon-slot.empty {
-    cursor: default;
-}
-
-.pack-modal-cta {
-    padding: var(--space-xl);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin: 0;
     text-align: center;
-    border-top: 2px solid var(--dark);
-    background: var(--light);
-}
-
-.pack-modal-cta p {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    margin-bottom: var(--space-md);
+    line-height: 1.5;
 }
 
 /* =======================================
@@ -452,7 +251,6 @@ header::before {
 .cta-section {
     text-align: center;
     padding: var(--space-2xl) var(--space-xl);
-    margin-top: var(--space-xl);
 }
 
 .cta-section p {
@@ -512,7 +310,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1100;
+    z-index: 1000;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -525,8 +323,8 @@ footer {
 }
 
 .lightbox img {
-    max-width: 60vw;
-    max-height: 60vh;
+    max-width: 70vw;
+    max-height: 70vh;
     object-fit: contain;
 }
 
@@ -554,6 +352,13 @@ footer {
 /* =======================================
    RESPONSIVE
    ======================================= */
+@media (max-width: 900px) {
+    .packs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
@@ -572,30 +377,7 @@ footer {
     .packs-grid {
         grid-template-columns: 1fr;
         padding: 0 var(--space-md) var(--space-xl);
-    }
-
-    .pack-nav {
-        gap: var(--space-sm);
-        padding: 0 var(--space-md);
-    }
-
-    .pack-nav-btn {
-        padding: 0.3rem 0.75rem;
-        font-size: 0.8rem;
-    }
-
-    .pack-modal-content {
-        max-height: 85vh;
-        margin: var(--space-md);
-    }
-
-    .pack-modal-header h2 {
-        font-size: 2rem;
-    }
-
-    .pack-modal-grid {
-        gap: var(--space-sm);
-        padding: var(--space-md);
+        max-width: 400px;
     }
 
     .lightbox img {
@@ -606,28 +388,14 @@ footer {
 
 @media (max-width: 480px) {
     .packs-grid {
-        padding: 0 var(--space-sm) var(--space-xl);
+        padding: 0 var(--space-md) var(--space-xl);
     }
 
     .pack-preview {
-        padding: var(--space-md);
+        padding: var(--space-sm);
     }
 
     .icon-grid {
-        gap: var(--space-xs);
-    }
-
-    .pack-info {
-        padding: var(--space-md);
-    }
-
-    .pack-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--space-xs);
-    }
-
-    .pack-count {
-        align-self: flex-start;
+        gap: 3px;
     }
 }
