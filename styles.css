@@ -218,7 +218,7 @@ header::before {
 }
 
 .icon-slot {
-    background: var(--cream);
+    background: var(--dark);
     border: 2px solid var(--dark);
     border-radius: 8px;
     display: flex;
