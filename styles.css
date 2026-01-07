@@ -198,8 +198,8 @@ header::before {
 .pack-header-bar h3 {
     color: var(--lightest);
     text-align: center;
-    font-size: 1.6rem;
-    letter-spacing: 0.08em;
+    font-size: 1.7rem;
+    letter-spacing: 0.09em;
     text-shadow: 1px 1px 0 var(--teal-dark);
 }
 
@@ -213,12 +213,11 @@ header::before {
    ======================================= */
 .icon-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);  /* Changed from 3 to 4 */
     gap: var(--space-xs);
 }
 
 .icon-slot {
-    background: var(--dark);
     border: 2px solid var(--dark);
     border-radius: 8px;
     display: flex;
@@ -228,12 +227,25 @@ header::before {
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     aspect-ratio: 1 / 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* Dark background - for light-colored icons */
+.icon-slot.dark {
+    background: var(--dark);
+}
+
+/* Light background - for dark-colored icons */
+.icon-slot.light {
+    background: var(--cream-light);
 }
 
 .icon-slot img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    min-width: 0;
 }
 
 .icon-slot.empty {
