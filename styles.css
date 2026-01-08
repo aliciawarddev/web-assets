@@ -198,9 +198,8 @@ header::before {
 .pack-header-bar h3 {
     color: var(--lightest);
     text-align: center;
-    font-size: 1.7rem;
-    letter-spacing: 0.09em;
-    text-shadow: 1px 1px 0 var(--teal-dark);
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
 }
 
 .pack-preview {
