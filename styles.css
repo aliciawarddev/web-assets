@@ -382,52 +382,85 @@ footer {
 }
 
 /* =======================================
-   RESPONSIVE
+   CATEGORY TABS
    ======================================= */
-@media (max-width: 900px) {
-    .packs-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-lg);
-    }
+.category-nav {
+    max-width: 72rem;
+    margin: 0 auto var(--space-xl);
+    padding: 0 var(--space-xl);
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--space-md);
-    }
-
-    .header-text {
-        text-align: left;
-    }
-
-    .packs-grid {
-        grid-template-columns: 1fr;
-        padding: 0 var(--space-md) var(--space-xl);
-        max-width: 400px;
-    }
-
-    .lightbox img {
-        max-width: 90vw;
-        max-height: 70vh;
-    }
+.category-tabs {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 480px) {
-    .packs-grid {
-        padding: 0 var(--space-md) var(--space-xl);
-    }
+.category-tab {
+    background: var(--cream);
+    color: var(--dark);
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--dark);
+    border-radius: 25px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: -2px 2px 0 0 var(--dark);
+}
 
-    .pack-preview {
-        padding: var(--space-sm);
-    }
+.category-tab:hover {
+    background: var(--mustard-light);
+    transform: translate(-1px, -1px);
+    box-shadow: -3px 3px 0 0 var(--dark);
+}
 
-    .icon-grid {
-        gap: 3px;
-    }
+.category-tab.active {
+    background: var(--teal);
+    color: var(--lightest);
+    box-shadow: -3px 3px 0 0 var(--dark);
+}
+
+/* =======================================
+   CATEGORY SECTIONS
+   ======================================= */
+.category-section {
+    display: none;
+}
+
+.category-section.active {
+    display: block;
+}
+
+/* =======================================
+   COMING SOON STATE
+   ======================================= */
+.coming-soon {
+    text-align: center;
+    padding: var(--space-2xl) var(--space-xl);
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.coming-soon-content {
+    background: var(--cream);
+    border: 2px solid var(--dark);
+    border-radius: 16px;
+    padding: var(--space-2xl);
+    box-shadow: -4px 4px 0 0 var(--mustard);
+}
+
+.coming-soon h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    color: var(--dark);
+    margin-bottom: var(--space-sm);
+}
+
+.coming-soon p {
+    color: var(--dark);
+    opacity: 0.7;
 }
