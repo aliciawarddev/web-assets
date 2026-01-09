@@ -74,11 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     patternPreviews.forEach(preview => {
         const patternSrc = preview.dataset.pattern;
+        const scale = preview.dataset.scale || '256';
+        
         if (patternSrc) {
-            // Apply the pattern as a tiled background
             preview.style.backgroundImage = `url('${patternSrc}')`;
+            preview.style.backgroundSize = `${scale}px ${scale}px`;
 
-            // Click to view the original tile in lightbox
             preview.addEventListener('click', () => {
                 lightboxImg.src = patternSrc;
                 lightboxImg.alt = 'Pattern tile';
@@ -87,4 +88,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
 });
