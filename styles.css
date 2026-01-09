@@ -484,3 +484,36 @@ footer {
     transform: translate(-2px, -2px);
     box-shadow: -4px 4px 0 0 var(--dark);
 }
+
+.background-toggle {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xs);
+    margin-top: var(--space-sm);
+}
+
+.toggle-btn {
+    background: var(--cream);
+    color: var(--dark);
+    border: 2px solid var(--dark);
+    border-radius: 12px;
+    padding: 0.25rem 0.75rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background: var(--mustard-light);
+}
+
+.toggle-btn.active {
+    background: var(--teal);
+    color: var(--lightest);
+}
+
+.pattern-preview.dark-bg {
+    background-color: var(--dark);
+}

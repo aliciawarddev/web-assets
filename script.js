@@ -89,4 +89,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // =======================================
+    // PATTERN BACKGROUND TOGGLE
+    // =======================================
+    const toggleButtons = document.querySelectorAll('.background-toggle .toggle-btn');
+
+    toggleButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const toggle = btn.parentElement;
+            const preview = toggle.previousElementSibling;
+
+            // Update active button
+            toggle.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Toggle background
+            if (btn.dataset.bg === 'dark') {
+                preview.classList.add('dark-bg');
+            } else {
+                preview.classList.remove('dark-bg');
+            }
+        });
+    });
 });
