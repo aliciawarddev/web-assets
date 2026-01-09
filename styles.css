@@ -464,3 +464,26 @@ footer {
     color: var(--dark);
     opacity: 0.7;
 }
+
+/* =======================================
+   PATTERN PREVIEW
+   ======================================= */
+.pattern-preview {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-size: 256px 256px;
+    background-repeat: repeat;
+    border: 2px solid var(--dark);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    /* Crisp scaling */
+    image-rendering: -webkit-optimize-contrast;  /* Chrome/Safari */
+    image-rendering: crisp-edges;                /* Firefox */
+}
+
+.pattern-preview:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: -4px 4px 0 0 var(--dark);
+}

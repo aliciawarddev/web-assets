@@ -30,33 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.getElementById('lightbox-close');
 
-    // Select all clickable items (icons, patterns, illustrations)
-    const clickableItems = document.querySelectorAll(
-        '.icon-slot:not(.empty), .pattern-tile img, .illustration-mockup img, .divider-sample img'
-    );
+    // Close lightbox function (defined early so it can be used by patterns)
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    };
 
-    // Open lightbox when clicking any asset
-    clickableItems.forEach(item => {
-        item.addEventListener('click', () => {
-            let img;
-            
-            // Handle different element types
-            if (item.tagName === 'IMG') {
-                img = item;
-            } else {
-                img = item.querySelector('img');
-            }
-
-            if (img) {
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    });
-
-    // Also handle icon slots (which contain images)
+    // Open lightbox for icon slots
     const iconSlots = document.querySelectorAll('.icon-slot:not(.empty)');
     iconSlots.forEach(slot => {
         slot.addEventListener('click', () => {
@@ -70,24 +50,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Close lightbox
-    const closeLightbox = () => {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-    };
-
+    // Close lightbox on X button
     lightboxClose.addEventListener('click', closeLightbox);
 
+    // Close lightbox on backdrop click
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
             closeLightbox();
         }
     });
 
-    // Keyboard navigation
+    // Close lightbox on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             closeLightbox();
+        }
+    });
+
+    // =======================================
+    // PATTERN TILE LOADING
+    // =======================================
+    const patternPreviews = document.querySelectorAll('.pattern-preview');
+
+    patternPreviews.forEach(preview => {
+        const patternSrc = preview.dataset.pattern;
+        if (patternSrc) {
+            // Apply the pattern as a tiled background
+            preview.style.backgroundImage = `url('${patternSrc}')`;
+
+            // Click to view the original tile in lightbox
+            preview.addEventListener('click', () => {
+                lightboxImg.src = patternSrc;
+                lightboxImg.alt = 'Pattern tile';
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
         }
     });
 });
