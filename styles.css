@@ -3,8 +3,8 @@
    ======================================= */
 :root {
     /* Simple MCM*/
-    --light: #FAF3E0;
-    --lightest: #FDF9F0;
+    --cream: #FDF9F0;      
+    --cream-dark: #F5EDD8; 
     --dark: #3A3A3A;
     --orange: #E07A5F;
     --orange-dark: #c7654c;
@@ -12,8 +12,14 @@
     --teal-dark: #2f7e7e;
     --mustard: #F2CC8F;
     --mustard-light: #f5d8a9;
+    
+
+    /* Archived colors
     --cream: #F5EDD8;
     --cream-light: #FAF5E8;
+    --light: #FAF3E0;
+    --lightest: #FDF9F0;
+    */
 
     /* Graphic MCM*/
     --graphic-orange: #D95B3F;
@@ -55,14 +61,18 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    background-color: var(--lightest);
+    background-color: var(--cream);
     color: var(--dark);
     min-height: 100vh;
+    background-image: url('images/textures/paper-soft.PNG');
+    background-repeat: repeat;
 }
 
 main {
-    background: var(--lightest);
+    background: var(--cream);
     padding-top: var(--space-2xl);
+    background-image: url('images/textures/paper-soft.PNG');
+    background-repeat: repeat;
 }
 
 /* =======================================
@@ -93,12 +103,16 @@ p {
    HEADER
    ======================================= */
 header {
-    background: var(--cream);
+    background: var(--cream-dark);
     padding: var(--space-xl) var(--space-xl);
     border-bottom: 3px solid var(--dark);
     position: relative;
+    background-image: url("images/patterns/diamonds-texture.PNG");
+    background-repeat: repeat;
+
 }
 
+/* 
 header::before {
     content: '';
     position: absolute;
@@ -113,6 +127,7 @@ header::before {
         repeating-linear-gradient(-45deg, var(--orange) 0px, var(--orange) 2px, transparent 2px, transparent 20px);
     pointer-events: none;
 }
+    */
 
 .header-content {
     max-width: 80rem;
@@ -163,7 +178,7 @@ header::before {
 
 .btn-primary:hover {
     background-color: var(--teal);
-    color: var(--lightest);
+    color: var(--cream);
     transform: translate(-2px, -2px);
     box-shadow: -4px 4px 0 0 var(--dark);
 }
@@ -181,7 +196,7 @@ header::before {
 }
 
 .pack-card {
-    background: var(--light);
+    background: var(--cream-dark);
     border: 2px solid var(--dark);
     border-radius: 16px;
     overflow: hidden;
@@ -196,14 +211,14 @@ header::before {
 }
 
 .pack-header-bar h3 {
-    color: var(--lightest);
+    color: var(--cream);
     text-align: center;
     font-size: 1.8rem;
     letter-spacing: 0.1em;
 }
 
 .pack-preview {
-    background: var(--cream-light);
+    background: var(--cream);
     padding: var(--space-md);
 }
 
@@ -237,7 +252,7 @@ header::before {
 
 /* Light background - for dark-colored icons */
 .icon-slot.light {
-    background: var(--cream-light);
+    background: var(--cream);
 }
 
 .icon-slot img {
@@ -248,7 +263,7 @@ header::before {
 }
 
 .icon-slot.empty {
-    background: var(--cream);
+    background: var(--cream-dark);
     border-style: dashed;
     border-color: var(--dark);
     cursor: default;
@@ -264,7 +279,7 @@ header::before {
    ======================================= */
 .pack-info {
     padding: var(--space-md) var(--space-lg);
-    background: var(--light);
+    background: var(--cream-dark);
     border-top: 2px solid var(--dark);
 }
 
@@ -298,8 +313,10 @@ header::before {
 footer {
     text-align: center;
     padding: var(--space-2xl) var(--space-xl);
-    background: var(--cream);
+    background: var(--cream-dark);
     border-top: 2px solid var(--dark);
+    background-image: url("images/patterns/diamonds-texture.PNG");
+    background-repeat: repeat;
 }
 
 .diamond-banner-mini {
@@ -378,7 +395,7 @@ footer {
 
 .lightbox-close:hover {
     background: var(--teal);
-    color: var(--lightest);
+    color: var(--cream);
 }
 
 /* =======================================
@@ -398,7 +415,7 @@ footer {
 }
 
 .category-tab {
-    background: var(--cream);
+    background: var(--cream-dark);
     color: var(--dark);
     padding: 0.6rem 1.5rem;
     border: 2px solid var(--dark);
@@ -419,7 +436,7 @@ footer {
 
 .category-tab.active {
     background: var(--teal);
-    color: var(--lightest);
+    color: var(--cream);
     box-shadow: -3px 3px 0 0 var(--dark);
 }
 
@@ -445,7 +462,7 @@ footer {
 }
 
 .coming-soon-content {
-    background: var(--cream);
+    background: var(--cream-dark);
     border: 2px solid var(--dark);
     border-radius: 16px;
     padding: var(--space-2xl);
@@ -493,7 +510,7 @@ footer {
 }
 
 .toggle-btn {
-    background: var(--cream);
+    background: var(--cream-dark);
     color: var(--dark);
     border: 2px solid var(--dark);
     border-radius: 12px;
@@ -511,7 +528,7 @@ footer {
 
 .toggle-btn.active {
     background: var(--teal);
-    color: var(--lightest);
+    color: var(--cream);
 }
 
 .pattern-preview.dark-bg {
