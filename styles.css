@@ -246,6 +246,12 @@ header::before {
     overflow: hidden;
 }
 
+.icon-slot:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
 /* Dark background - for light-colored icons */
 .icon-slot.dark {
     background: var(--dark);
@@ -526,8 +532,8 @@ footer {
 }
 
 .pattern-preview:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: -4px 4px 0 0 var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .background-toggle {
