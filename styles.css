@@ -147,7 +147,7 @@ header::before {
 .header-tagline {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--teal-dark);
     margin-top: var(--space-xs);
     letter-spacing: 0.02em;
@@ -427,6 +427,7 @@ footer {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: none; /* Flatter appearance */
+    font-weight: normal;
 }
 
 .category-tab:hover {
